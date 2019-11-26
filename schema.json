@@ -1,0 +1,371 @@
+[
+  {
+    "name": "ts",
+    "type": "TIMESTAMP"
+  },
+  {
+    "name": "post",
+    "type": "STRING"
+  },
+  {
+    "name": "post_title",
+    "type": "STRING"
+  },
+  {
+    "name": "link",
+    "type": "STRING"
+  },
+  {
+    "name": "updated_utc",
+    "type": "INTEGER"
+  },
+  {
+    "name": "author_cakeday",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "edited_utc",
+    "type": "INTEGER"
+  },
+  {
+    "name": "author_delta",
+    "type": "INTEGER"
+  },
+  {
+    "name": "reply_delay",
+    "type": "INTEGER"
+  },
+  {
+    "name": "user_removed",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "score",
+    "type": "INTEGER"
+  },
+  {
+    "name": "length",
+    "type": "INTEGER"
+  },
+  {
+    "name": "id",
+    "type": "STRING"
+  },
+  {
+    "name": "created_utc",
+    "type": "INTEGER"
+  },
+  {
+    "name": "author_flair_text",
+    "type": "STRING"
+  },
+  {
+    "name": "collapsed_reason",
+    "type": "STRING"
+  },
+  {
+    "name": "send_replies",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "locked",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "score_hidden",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "author_created_utc",
+    "type": "INTEGER"
+  },
+  {
+    "name": "distinguished",
+    "type": "STRING"
+  },
+  {
+    "name": "stickied",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "associated_award",
+    "type": "STRING"
+  },
+  {
+    "fields": [
+      {
+        "name": "gid_3",
+        "type": "INTEGER"
+      },
+      {
+        "name": "gid_2",
+        "type": "INTEGER"
+      },
+      {
+        "name": "gid_1",
+        "type": "INTEGER"
+      }
+    ],
+    "name": "gildings",
+    "type": "RECORD"
+  },
+  {
+    "name": "nest_level",
+    "type": "INTEGER"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "steward_reports",
+    "type": "STRING"
+  },
+  {
+    "name": "permalink",
+    "type": "STRING"
+  },
+  {
+    "name": "subreddit_type",
+    "type": "STRING"
+  },
+  {
+    "name": "author_flair_css_class",
+    "type": "STRING"
+  },
+  {
+    "name": "parent_id",
+    "type": "STRING"
+  },
+  {
+    "mode": "REPEATED",
+    "name": "awarders",
+    "type": "STRING"
+  },
+  {
+    "name": "mod_removed",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "body",
+    "type": "STRING"
+  },
+  {
+    "name": "author",
+    "type": "STRING"
+  },
+  {
+    "name": "author_flair_text_color",
+    "type": "STRING"
+  },
+  {
+    "name": "author_fullname",
+    "type": "STRING"
+  },
+  {
+    "name": "subreddit_id",
+    "type": "STRING"
+  },
+  {
+    "name": "subreddit_name_prefixed",
+    "type": "STRING"
+  },
+  {
+    "fields": [
+      {
+        "name": "name",
+        "type": "STRING"
+      },
+      {
+        "name": "icon_width",
+        "type": "INTEGER"
+      },
+      {
+        "name": "subreddit_coin_reward",
+        "type": "INTEGER"
+      },
+      {
+        "name": "coin_price",
+        "type": "INTEGER"
+      },
+      {
+        "name": "start_date",
+        "type": "INTEGER"
+      },
+      {
+        "name": "award_type",
+        "type": "STRING"
+      },
+      {
+        "name": "days_of_drip_extension",
+        "type": "INTEGER"
+      },
+      {
+        "name": "icon_height",
+        "type": "INTEGER"
+      },
+      {
+        "name": "icon_url",
+        "type": "STRING"
+      },
+      {
+        "name": "days_of_premium",
+        "type": "INTEGER"
+      },
+      {
+        "name": "coin_reward",
+        "type": "INTEGER"
+      },
+      {
+        "name": "id",
+        "type": "STRING"
+      },
+      {
+        "name": "end_date",
+        "type": "INTEGER"
+      },
+      {
+        "name": "subreddit_id",
+        "type": "STRING"
+      },
+      {
+        "name": "is_enabled",
+        "type": "BOOLEAN"
+      },
+      {
+        "name": "description",
+        "type": "STRING"
+      },
+      {
+        "fields": [
+          {
+            "name": "height",
+            "type": "INTEGER"
+          },
+          {
+            "name": "width",
+            "type": "INTEGER"
+          },
+          {
+            "name": "url",
+            "type": "STRING"
+          }
+        ],
+        "mode": "REPEATED",
+        "name": "resized_icons",
+        "type": "RECORD"
+      },
+      {
+        "name": "count",
+        "type": "INTEGER"
+      },
+      {
+        "name": "award_sub_type",
+        "type": "STRING"
+      },
+      {
+        "name": "is_new",
+        "type": "BOOLEAN"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "all_awardings",
+    "type": "RECORD"
+  },
+  {
+    "name": "retrieved_on",
+    "type": "INTEGER"
+  },
+  {
+    "name": "author_flair_background_color",
+    "type": "STRING"
+  },
+  {
+    "name": "can_gild",
+    "type": "BOOLEAN"
+  },
+  {
+    "fields": [
+      {
+        "name": "u",
+        "type": "STRING"
+      },
+      {
+        "name": "e",
+        "type": "STRING"
+      },
+      {
+        "name": "t",
+        "type": "STRING"
+      },
+      {
+        "name": "a",
+        "type": "STRING"
+      }
+    ],
+    "mode": "REPEATED",
+    "name": "author_flair_richtext",
+    "type": "RECORD"
+  },
+  {
+    "name": "collapsed",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "controversiality",
+    "type": "INTEGER"
+  },
+  {
+    "name": "author_patreon_flair",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "subreddit",
+    "type": "STRING"
+  },
+  {
+    "name": "edited",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "author_flair_type",
+    "type": "STRING"
+  },
+  {
+    "name": "link_id",
+    "type": "STRING"
+  },
+  {
+    "name": "gilded",
+    "type": "INTEGER"
+  },
+  {
+    "name": "no_follow",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "is_submitter",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "author_flair_template_id",
+    "type": "STRING"
+  },
+  {
+    "name": "total_awards_received",
+    "type": "INTEGER"
+  },
+  {
+    "name": "edited_body",
+    "type": "STRING"
+  },
+  {
+    "name": "collapsed_because_crowd_control",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "can_mod_post",
+    "type": "BOOLEAN"
+  },
+  {
+    "name": "removal_reason",
+    "type": "STRING"
+  }
+]
