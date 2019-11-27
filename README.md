@@ -4,7 +4,7 @@ These scripts will load data from the pushshift.io API for reddit comments into 
 
 ## Prepare
 
-You must have `bq`, `jq`, `wget` and `bash` installed.  In the script set the values for `ENDDATE`, `PROJECT`, `DATASET` and `TABLE`.  Note that dataset must already exist.  Table will be destroyed without backing up - be sure that you put in a new table name or one you are okay with losing.  
+You must have `bq`, `jq`, `wget` and `bash` installed.  In the `config.sh` script set the values for `ENDDATE`, `PROJECT`, `DATASET` and `TABLE`.  Note that dataset must already exist.  Table will be destroyed without backing up - be sure that you put in a new table name or one you are okay with losing.  
 
 ## Initialize
 
@@ -20,7 +20,7 @@ On a recurring basis, you can run the `refresh.sh` script to pull in any new rec
 
 ## Docker
 
-You can run this with the attached docker image and a service user.  You'll need to install docker first of course, and create a service user.  Take the json file generated during service user creation, rename it to `secret.json` and place it in the `secret` folder of this project.  Now you are ready to run.  First build the docker image.  
+You can run this with the attached docker image and a service user.  You'll need to install docker first of course, and create a service user.  Take the json file generated during service user creation, rename it to `secret.json` and place it in the `secret` folder of this project.  Now you are ready to run.  First build the docker image (don't forget to copy the '.' at the end of the command).  
 ```
 docker build -t boomeretl .
 ```
