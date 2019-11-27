@@ -17,3 +17,17 @@ This will load all records up to the ENDDATE in the script.  Good for first-time
 ## Refresh
 
 On a recurring basis, you can run the `refresh.sh` script to pull in any new records since the latest record in your database.  
+
+## Docker
+
+You can run this with the attached docker image and a service user.  You'll need to install docker first of course, and create a service user.  Take the json file generated during service user creation and place it in the `secret` folder.  Now you are ready to run.  First build the docker image.  
+```
+docker build -t boomeretl
+```
+Next you'll need to run but you have to authenticate as part of the command.
+```
+docker run --entrypoint bash boomeretl \
+  -c "gcloud auth activate-service-account --key-file /usr/src/app/secret/secret.json && \
+        ./refresh.sh"
+```
+This should run the refresh script on any system that is docker-enabled.  
