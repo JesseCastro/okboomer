@@ -1,8 +1,7 @@
 #!/bin/bash
 
-PROJECT=PROJECTNAME
-DATASET=DATASETNAME
-TABLE=TABLENAME
+# config
+source ./config.sh
 # NOTE: CURRENT MAX SEEMS TO BE 1000
 RECORDS=1000
 FILENAME=`date -u +%Y%m%d%H%M%S`
@@ -13,7 +12,7 @@ MAXDATE=`bq query --use_legacy_sql=false --format=json $QUERY | jq -c '.[].f0_' 
 echo "VARIABLES LOADED... ENTERING LOOP"
 # fetch the next batch of records
 while [ $MAXDATE -lt $ENDDATE ]; do
-  wget "http://api.pushshift.io/reddit/search/comment/?q=ok%20boomer&after=$MAXDATE&before=$ENDDATE&sort_type=created_utc&sort=asc&size=$RECORDS" -O - \
+  wget "http://api.pushshift.io/reddit/search/comment/?q=$QSTRING&after=$MAXDATE&before=$ENDDATE&sort_type=created_utc&sort=asc&size=$RECORDS" -O - \
   | jq -c "del(.data[].media_metadata)|.data[]" > $FILENAME.json
 
   # load the records into our newly created table

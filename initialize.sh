@@ -1,19 +1,14 @@
 #!/bin/bash
 
-# note this utc is for Jan 01 2019
-STARTDATE=1546300800
-# and this date is for NOV 15th 2019, our target enddate
-ENDDATE=1573776000
-PROJECT=PROJECTNAME
-DATASET=DATASETNAME
-TABLE=TABLENAME
+# config
+source ./config.sh
 FILENAME=`date -u +%Y%m%d%H%M%S`
 
 # remove the table if it exists
 bq rm -f -t $PROJECT:$DATASET.$TABLE
 
 # extract the first 10k records from 2019-01-01 onward
-wget "http://api.pushshift.io/reddit/search/comment/?q=ok%20boomer&after=$STARTDATE&before_=$ENDDATE&sort_type=created_utc&sort=asc&size=10000" -O - \
+wget "http://api.pushshift.io/reddit/search/comment/?q=$QSTRING&after=$STARTDATE&before_=$ENDDATE&sort_type=created_utc&sort=asc&size=10000" -O - \
 | jq -c "del(.data[].media_metadata)|.data[]" > $FILENAME.json
 
 # make the table with our json schema file.
@@ -32,7 +27,7 @@ rm $FILENAME.json
 
 # fetch the next batch of records
 while [ $MAXDATE -le $ENDDATE ]; do
-  wget "http://api.pushshift.io/reddit/search/comment/?q=ok%20boomer&after=$MAXDATE&sort_type=created_utc&sort=asc&size=10000" -O - \
+  wget "http://api.pushshift.io/reddit/search/comment/?q=$QSTRING&after=$MAXDATE&sort_type=created_utc&sort=asc&size=10000" -O - \
   | jq -c "del(.data[].media_metadata)|.data[]" > $FILENAME.json
 
   # load the records into our newly created table
