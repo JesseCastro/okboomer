@@ -22,7 +22,7 @@ On a recurring basis, you can run the `refresh.sh` script to pull in any new rec
 
 You can run this with the attached docker image and a service user.  You'll need to install docker first of course, and create a service user.  Take the json file generated during service user creation, rename it to `secret.json` and place it in the `secret` folder of this project.  Now you are ready to run.  First build the docker image.  
 ```
-docker build -t boomeretl
+docker build -t boomeretl .
 ```
 Next you'll need to run but you have to authenticate as part of the command.
 ```
